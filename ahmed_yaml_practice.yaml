@@ -1,0 +1,46 @@
+#This line defines the username
+name: Ahmed
+
+age: 30
+
+salary: 50.50
+user_name: bohmeed
+is_active: true
+employment_date: 2024-06-01t14:30:00Z
+ #Z - GMT and T14 is the time in 24 hours format
+
+direct_manager: Moustafa
+
+serial: "0050" 
+#as is so we use double quotes to avoid any issues with leading zeros
+
+regex: "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" 
+# between double quotes cuz specia chars has a meaning in YAML
+
+message: "Hello\nWorld!" 
+# backslash new line character, if you need 
+
+path: "C:\\Users\\Ahmed"
+quote: "It's YAML" #It's YAML
+
+s_message: 'Hello\nWorld!' 
+# single quotes, no special meaning for backslash and prints LITERAL
+
+s_quote: 'it''s YAML' # It's YAML
+# single quotes, to print single quote we use two single quotes
+
+
+long_message: |
+  This is a long message
+  that spans multiple lines
+  and preserves line breaks.
+#literal block scaler - keeps formatting and line breaks and white spaces all AS IS.
+
+
+folder_message: >
+  This is a folded message
+  that spans multiple lines
+  and will be folded into a single line.
+
+#folded message: converts all of the text into a single line,
+#replacing newlines with spaces, while preserving the content..
