@@ -1,0 +1,16 @@
+#cron job to run every day at midnight
+#each asterk in cron means every, 
+#so this cron job will run every day at midnight
+
+on:
+ schedule:
+ - cron: "1 * * * *" 
+ 
+
+
+jobs:
+    daily-task:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Print current date and time
+          run: echo "the current date is $(date)"
