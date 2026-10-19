@@ -1,0 +1,25 @@
+#webhook triggers
+
+on:
+    push:
+        branches:
+            - main
+            - "release/**" #globbing - wildcard - any release branch 
+        paths:
+            - "src/**" #only run workflow if changes are made in src folder
+            - "package.json" #only run workflow if changes are made in package.json
+    pull_request:
+        branches:
+            - main
+            - "release/**" 
+
+jobs:
+     test:
+        runs-on: ubuntu-latest
+        steps: #list of maps
+        - name: checkout code
+          uses: actions/checkout@v4.2.2 #checkout code from repo
+
+        - name: run tests
+          run: npm test #run tests using npm
+              
